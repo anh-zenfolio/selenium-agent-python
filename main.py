@@ -1,4 +1,5 @@
 import os
+import time
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
@@ -10,6 +11,8 @@ def check_browser(browser):
   )
   driver.get("http://google.com")
   assert "google" in driver.page_source
+  print("asserting .....")
+  time.sleep(15)
   driver.quit()
   print("Browser %s checks out!" % browser)
 
