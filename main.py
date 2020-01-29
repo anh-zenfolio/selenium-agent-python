@@ -1,5 +1,6 @@
 import unittest
 import time
+import warnings
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -55,4 +56,6 @@ class HackerNewsSearchTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    warnings.filterwarnings(action="ignore", message="unclosed", 
+                         category=ResourceWarning)
     unittest.main()
